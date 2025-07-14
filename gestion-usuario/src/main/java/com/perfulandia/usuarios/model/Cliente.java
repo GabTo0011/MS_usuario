@@ -17,7 +17,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "CLIENTE")
+@Table(name = "clientes")
 
 @Data
 @NoArgsConstructor
@@ -32,11 +32,13 @@ public class Cliente {
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
     
-    private String nombre;
-    private String apellido;
+    private String nombreCompleto;
     private String rut;
     private String telefono;
     private String direccion;
-    private String comuna;
+
+    // private String comuna;
 
 }
+
+

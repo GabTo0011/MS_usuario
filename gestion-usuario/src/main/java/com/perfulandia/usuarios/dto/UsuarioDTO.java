@@ -1,7 +1,5 @@
 package com.perfulandia.usuarios.dto;
 
-import java.time.LocalDateTime;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,10 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UsuarioDTO {
     private Integer idUsuario;
-    private String userName;
+    private String nombreUsuario;
     private String email;
     private String rol;
     private String estado;
-    private LocalDateTime createDate;
-    private LocalDateTime lastLogDate;
 }

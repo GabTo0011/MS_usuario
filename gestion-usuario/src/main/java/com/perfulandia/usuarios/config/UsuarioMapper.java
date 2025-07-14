@@ -12,12 +12,12 @@ public class UsuarioMapper {
         UsuarioDTO dto = new UsuarioDTO();
         
         dto.setIdUsuario(usuario.getIdUsuario());
-        dto.setUserName(usuario.getUserName());
+        dto.setNombreUsuario(usuario.getUserName());
         dto.setEmail(usuario.getEmail());
         dto.setRol(usuario.getRol());
         dto.setEstado(usuario.getEstado());
-        dto.setCreateDate(usuario.getCreateDate());
-        dto.setLastLogDate(usuario.getLastLogDate());
+        // dto.setCreateDate(usuario.getCreateDate());
+        // dto.setLastLogDate(usuario.getLastLogDate());
         
         return dto;
     }

@@ -12,10 +12,10 @@ import lombok.AllArgsConstructor;
 
 import jakarta.persistence.Column;
 
-import java.time.LocalDateTime;
+// import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "USUARIO")
+@Table(name = "usuarios")
 
 @Data // Getters /Setters
 @NoArgsConstructor
@@ -26,16 +26,20 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_usuario")
     private Integer idUsuario;
-
+    
+    @Column(name = "nombre_usuario")
     private String userName;
     private String email;
+    
+    @Column(name = "contrasena")
     private String pws;
     private String rol;
     private String estado;
 
-    @Column(name = "create_date")
-    private LocalDateTime createDate = LocalDateTime.now();
+    // @Column(name = "create_date")
+    // private LocalDateTime createDate = LocalDateTime.now();
     
-    @Column(name = "last_log_date")
-    private LocalDateTime lastLogDate = LocalDateTime.now();
+    // @Column(name = "last_log_date")
+    // private LocalDateTime lastLogDate = LocalDateTime.now();
 }
+

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity // entidad JPA, mapea una tabla
-@Table(name="VENDEDOR") // nombre tabla que represneta la entidad
+@Table(name="vendedores") // nombre tabla que represneta la entidad
 
 @Data
 @NoArgsConstructor
@@ -15,15 +15,15 @@ public class Vendedor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_vendedor") // mapea este atributo
     private Integer idVendedor;
-
+    
     @OneToOne
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
     
-    private String nombre;
-    private String apellido;
+    private String nombreCompleto;
     private String rut;
-    private String sucursal;
-    private String areaVenta;
-
+    private String areaVentas;
+    
+    // private String sucursal;
 }
+
